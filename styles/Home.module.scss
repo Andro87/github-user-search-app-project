@@ -1,0 +1,27 @@
+@import "./styles/variables.scss";
+
+.main_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 30px 24px 80px;
+    background-color: var(--MainBackground);
+    @media screen and (min-width: $tablet) {
+        padding: 140px 97px;
+    }
+}
+
+.main {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--MainBackground);
+
+    @media screen and (min-width: $tablet) {
+        max-width: 570px;
+    }
+    @media screen and (min-width: $desktop) {
+        max-width: 730px;
+    }
+}

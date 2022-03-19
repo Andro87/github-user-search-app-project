@@ -1,0 +1,40 @@
+@import "../styles/variables.scss";
+.contact {
+    display: flex;
+    align-items: center;
+    color: var(--Text);
+    font-family: "mono";
+    font-weight: 400;
+    font-size: 1rem;
+    @media screen and (min-width: $tablet) {
+        font-size: 1.15rem;
+    }
+    a {
+        text-decoration: none;
+        color: var(--Text);
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    svg {
+        margin-right: 13px;
+        path {
+            fill: var(--Icon);
+        }
+        g {
+            fill: var(--Icon);
+        }
+    }
+}
+.contact_not {
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+
+    a {
+        &:hover {
+            text-decoration: none;
+            cursor: none;
+        }
+    }
+}

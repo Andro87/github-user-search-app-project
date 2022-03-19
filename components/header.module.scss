@@ -1,0 +1,37 @@
+@import "../styles/variables.scss";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+.switch_wrap {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    p {
+        font-family: "mono";
+        font-weight: 700;
+        font-size: 1rem;
+        margin-right: 16px;
+    }
+    &:hover {
+        cursor: pointer;
+        color: var(--HoverSwitch);
+        svg {
+            path {
+                fill: var(--HoverSwitch);
+            }
+            g {
+                fill: var(--HoverSwitch);
+            }
+        }
+    }
+}
+.btn_switch {
+    background: transparent;
+    border: none;
+    &:hover {
+        cursor: pointer;
+    }
+}
