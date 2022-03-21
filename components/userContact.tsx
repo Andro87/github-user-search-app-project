@@ -5,12 +5,13 @@ interface Props {
     readonly contact: string;
     readonly contact_icon: ReactNode;
     readonly location?: boolean;
+    readonly twitter?: boolean;
 }
 
 const UserContact: React.FunctionComponent<Props> = props => {
-    const { contact, contact_icon, location } = props;
+    const { contact, contact_icon, location, twitter } = props;
 
-    function deleteFirstLetter(word) {
+    function getContact(word) {
         if (!word) {
             return "#";
         }
@@ -18,6 +19,9 @@ const UserContact: React.FunctionComponent<Props> = props => {
         if (word.startsWith("@")) {
             let newWord = word.substring(1);
             return ` https://github.com/${newWord}`;
+        }
+        if (twitter) {
+            return `https://twitter.com/${word}`;
         }
 
         return word;
@@ -32,7 +36,7 @@ const UserContact: React.FunctionComponent<Props> = props => {
             {location ? (
                 <p> {contact ? contact : "Not Available"}</p>
             ) : (
-                <a href={deleteFirstLetter(contact)}>
+                <a href={getContact(contact)}>
                     {contact ? contact : "Not Available"}
                 </a>
             )}

@@ -20,14 +20,14 @@
     color: var(--Input);
     text-indent: 9px;
     border: none;
-    background-color: transparent;
-
+    background-color: var(--LighterBackground);
     &::placeholder {
         color: var(--Text);
     }
     &:focus {
         outline: none;
     }
+
     @media screen and (min-width: $tablet) {
         font-size: 1.38rem;
     }

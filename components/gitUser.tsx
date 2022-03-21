@@ -173,6 +173,7 @@ const GitUser: React.FunctionComponent = () => {
                         </div>
                         <div className={styles.detail_wrap}>
                             <UserContact
+                                twitter={true}
                                 contact={user.twitter_username}
                                 contact_icon={<Twitter />}
                             />
