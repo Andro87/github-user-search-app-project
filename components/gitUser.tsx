@@ -164,7 +164,7 @@ const GitUser: React.FunctionComponent = () => {
                             <UserContact
                                 contact={user.location}
                                 contact_icon={<Location />}
-                                location={true}
+                                isNotLink
                             />
                             <UserContact
                                 contact={user.blog}
@@ -173,13 +173,14 @@ const GitUser: React.FunctionComponent = () => {
                         </div>
                         <div className={styles.detail_wrap}>
                             <UserContact
-                                twitter={true}
+                                twitter
                                 contact={user.twitter_username}
                                 contact_icon={<Twitter />}
                             />
                             <UserContact
                                 contact={user.company}
                                 contact_icon={<Company />}
+                                isNotLink
                             />
                         </div>
                     </div>

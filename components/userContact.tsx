@@ -4,12 +4,12 @@ import styles from "./userContact.module.scss";
 interface Props {
     readonly contact: string;
     readonly contact_icon: ReactNode;
-    readonly location?: boolean;
+    readonly isNotLink?: boolean;
     readonly twitter?: boolean;
 }
 
 const UserContact: React.FunctionComponent<Props> = props => {
-    const { contact, contact_icon, location, twitter } = props;
+    const { contact, contact_icon, isNotLink, twitter } = props;
 
     function getContact(word) {
         if (!word) {
@@ -33,7 +33,7 @@ const UserContact: React.FunctionComponent<Props> = props => {
             }`}
         >
             {contact_icon}
-            {location ? (
+            {isNotLink ? (
                 <p> {contact ? contact : "Not Available"}</p>
             ) : (
                 <a href={getContact(contact)}>
