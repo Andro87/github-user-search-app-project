@@ -1,9 +1,11 @@
 import React from "react";
-import styles from "./header.module.scss";
+import styles from "./Header.module.scss";
 import { useState, useEffect } from "react";
-import Sun from "../svg/icon-sun.svg";
-import Moon from "../svg/icon-moon.svg";
-export default function Header() {
+import Sun from "svg/icon-sun.svg";
+import Moon from "svg/icon-moon.svg";
+
+//
+export const Header: React.FunctionComponent = () => {
     const [dark, setDark] = useState(false);
 
     useEffect(() => {
@@ -30,4 +32,4 @@ export default function Header() {
             </div>
         </div>
     );
-}
+};

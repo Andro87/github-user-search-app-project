@@ -1,8 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 
-import Header from "../components/header";
-import GitUser from "../components/gitUser";
+import { Header, GitUser } from "components";
 
 export default function Home() {
     return (

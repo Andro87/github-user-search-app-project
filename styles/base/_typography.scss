@@ -1,0 +1,35 @@
+@use "styles/helpers" as *;
+
+@font-face {
+    font-family: "mono";
+    src: url("/fonts/SpaceMono-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "mono";
+    src: url("/fonts/SpaceMono-Regular.ttf");
+    font-weight: 400;
+}
+h1,
+h2 {
+    font-family: "mono";
+    font-weight: 700;
+    color: var(--darker-test);
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.23rem;
+    @include breakpoint($medium) {
+        font-size: 2rem;
+    }
+}
+h3 {
+    font-family: "mono";
+    font-weight: 400;
+    font-size: 0.85rem;
+    @include breakpoint($medium) {
+        font-size: 1rem;
+    }
+}

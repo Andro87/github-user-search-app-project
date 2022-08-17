@@ -1,0 +1,27 @@
+:root {
+    --logo: hsla(220, 18%, 16%, 1);
+    --darker-test: hsla(217, 21%, 21%, 1);
+    --azure: hsla(212, 100%, 50%, 1);
+    --light-azure: hsla(212, 100%, 69%, 1);
+    --text: hsla(217, 35%, 45%, 1);
+    --join-text: hsla(217, 20%, 51%, 1);
+    --main-background: hsla(226, 100%, 98%, 1);
+    --lighter-background: hsla(0, 0%, 100%, 1);
+    --white: hsla(0, 0%, 100%, 1);
+    --icon: #4b6a9b;
+    --hover-switch: hsla(220, 18%, 16%, 1);
+    --red: hsla(0, 91%, 62%, 1);
+    --input: hsla(220, 18%, 16%, 1);
+}
+
+[data-theme="dark"] {
+    --logo: hsla(0, 0%, 100%, 1);
+    --darker-test: hsla(0, 0%, 100%, 1);
+    --text: hsla(0, 0%, 100%, 1);
+    --join-text: hsla(0, 0%, 100%, 1);
+    --main-background: hsla(220, 40%, 13%, 1);
+    --lighter-background: hsla(222, 41%, 20%, 1);
+    --icon: hsla(0, 0%, 100%, 1);
+    --hover-switch: hsla(222, 44%, 70%, 1);
+    --input: hsla(0, 0%, 100%, 1);
+}

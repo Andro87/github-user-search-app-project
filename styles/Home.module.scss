@@ -1,4 +1,4 @@
-@import "./styles/variables.scss";
+@use "styles/helpers" as *;
 
 .main_container {
     display: flex;
@@ -7,8 +7,8 @@
     flex-direction: column;
     min-height: 100vh;
     padding: 30px 24px 80px;
-    background-color: var(--MainBackground);
-    @media screen and (min-width: $tablet) {
+    background-color: var(--main-background);
+    @include breakpoint($medium) {
         padding: 140px 97px;
     }
 }
@@ -16,12 +16,12 @@
 .main {
     width: 100%;
     max-width: 400px;
-    background-color: var(--MainBackground);
+    background-color: var(--main-background);
 
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         max-width: 570px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         max-width: 730px;
     }
 }

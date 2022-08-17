@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 13px;
+}
+
+body {
+    color: var(--text);
+    border-color: var(--main-background);
+}

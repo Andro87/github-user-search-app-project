@@ -1,8 +1,9 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
+
 .search_box {
     display: flex;
     align-items: center;
-    background-color: var(--LighterBackground);
+    background-color: var(--lighter-background);
     margin-bottom: 16px;
     padding: 7px;
     border-radius: 10px;
@@ -17,30 +18,30 @@
     font-family: "mono";
     font-weight: 400;
     font-size: 1rem;
-    color: var(--Input);
+    color: var(--input);
     text-indent: 9px;
     border: none;
-    background-color: var(--LighterBackground);
+    background-color: var(--lighter-background);
     &::placeholder {
-        color: var(--Text);
+        color: var(--text);
     }
     &:focus {
         outline: none;
     }
 
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         font-size: 1.38rem;
     }
 }
 .error_message {
-    color: var(--Red);
+    color: var(--red);
     font-family: "mono";
     font-weight: 700;
     font-size: 1rem;
     position: absolute;
     bottom: 0;
     left: 50px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         font-size: 1.15rem;
         position: initial;
     }
@@ -50,19 +51,19 @@
     font-family: "mono";
     font-weight: 700;
     font-size: 1.08rem;
-    color: var(--White);
-    background-color: var(--Azure);
+    color: var(--white);
+    background-color: var(--azure);
     padding: 12px 16px;
     border-radius: 10px;
     width: 85px;
     margin-left: auto;
     transition: all 0.3s ease-out;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         padding: 12px 24px;
         width: 106px;
     }
     &:hover {
-        background-color: var(--LightAzure);
+        background-color: var(--light-azure);
         cursor: pointer;
     }
 }
@@ -71,33 +72,33 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    background-color: var(--LighterBackground);
+    background-color: var(--lighter-background);
     border-radius: 15px;
     padding: 32px 24px 48px;
     box-shadow: 0px 16px 30px -10px hsla(227, 46%, 51%, 0.2);
 
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         padding: 40px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         padding: 48px;
     }
     img {
         width: 70px;
         height: 70px;
         border-radius: 50%;
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             width: 117px;
             height: 117px;
         }
-        @media screen and (min-width: $desktop) {
+        @include breakpoint($large) {
             position: absolute;
             left: 48px;
         }
     }
 }
 .user_box_wrap {
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         width: 78%;
         margin-left: auto;
     }
@@ -111,11 +112,11 @@
     font-size: 1rem;
     margin-left: 20px;
 
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         font-size: 1.15rem;
         margin-left: 40px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -124,14 +125,14 @@
     }
 }
 .user_login {
-    color: var(--Azure);
-    @media screen and (min-width: $tablet) {
+    color: var(--azure);
+    @include breakpoint($medium) {
         font-size: 1.23rem;
     }
 }
 .user_join {
-    color: var(--JoinText);
-    @media screen and (min-width: $desktop) {
+    color: var(--join-text);
+    @include breakpoint($large) {
         position: absolute;
         right: 0;
         top: 8px;
@@ -145,12 +146,12 @@
     margin-top: 33px;
     margin-bottom: 23px;
 
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         font-size: 1.15rem;
         margin-top: 24px;
         margin-bottom: 32px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         margin: 20px 0 32px;
     }
 }
@@ -158,25 +159,23 @@
     opacity: 0.75;
 }
 .user_gitinfo {
-    background-color: var(--MainBackground);
+    background-color: var(--main-background);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border-radius: 10px;
     padding: 18px 15px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         padding: 15px 32px;
-    }
-    @media screen and (min-width: $desktop) {
     }
 }
 
 .git_info {
     p {
-        color: var(--DarkerTest);
+        color: var(--darker-test);
         font-family: "mono";
         font-weight: 700;
         font-size: 1.23rem;
-        @media screen and (min-width: $tablet) {
+        @include breakpoint($medium) {
             font-size: 1.69rem;
         }
     }
@@ -187,14 +186,14 @@
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 16px;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         margin-top: 30px;
 
         grid-template-columns: repeat(2, 1fr);
         row-gap: 0;
         column-gap: 35px;
     }
-    @media screen and (min-width: $desktop) {
+    @include breakpoint($large) {
         column-gap: 30px;
     }
 }

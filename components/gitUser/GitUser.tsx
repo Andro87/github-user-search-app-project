@@ -1,49 +1,15 @@
 import React, { useEffect, useState } from "react";
-import styles from "./gitUser.module.scss";
+import styles from "./GitUser.module.scss";
 import { useForm } from "react-hook-form";
-import Search from "../svg/icon-search.svg";
-import Location from "../svg/icon-location.svg";
-import Website from "../svg/icon-website.svg";
-import Twitter from "../svg/icon-twitter.svg";
-import Company from "../svg/icon-company.svg";
-import UserContact from "./userContact";
+import Search from "svg/icon-search.svg";
+import Location from "svg/icon-location.svg";
+import Website from "svg/icon-website.svg";
+import Twitter from "svg/icon-twitter.svg";
+import Company from "svg/icon-company.svg";
+import { UserContact } from "components";
+import User from "model/User";
 
-//1.An Interface that describes what is in the response
-
-interface User {
-    readonly login: string;
-    readonly id: number;
-    readonly node_id: string;
-    readonly avatar_url: string;
-    readonly gravatar_id: string;
-    readonly url: string;
-    readonly html_url: string;
-    readonly followers_url: string;
-    readonly following_url: string;
-    readonly gists_url: string;
-    readonly starred_url: string;
-    readonly subscriptions_url: string;
-    readonly organizations_url: string;
-    readonly repos_url: string;
-    readonly events_url: string;
-    readonly received_events_url: string;
-    readonly type: string;
-    readonly site_admin: boolean;
-    readonly name: string;
-    readonly company: string;
-    readonly blog: string;
-    readonly location: string;
-    readonly email: string;
-    readonly hireable: boolean;
-    readonly bio: string;
-    readonly twitter_username: string;
-    readonly public_repos: number;
-    readonly public_gists: number;
-    readonly followers: number;
-    readonly following: number;
-    readonly created_at: string;
-    readonly updated_at: string;
-}
+//1.An Interface that describes what is in the response (User)
 
 //2.A function to fetch the data from the api.
 //    this function should take an username and should return a promise with the 'User' model.
@@ -59,7 +25,7 @@ const getUser = (username: string): Promise<User> => {
 
 //3.The component. It needs to have the user stored in a state, and whether it is loading or not in a state
 
-const GitUser: React.FunctionComponent = () => {
+export const GitUser: React.FunctionComponent = () => {
     const [user, setUser] = useState<User>();
     const [busy, setBusy] = useState(true); // Initial state to true because there is no 'user' data on load
     const [error, setError] = useState<Error>();
@@ -189,8 +155,6 @@ const GitUser: React.FunctionComponent = () => {
         </>
     );
 };
-
-export default GitUser;
 
 //4.The first thing we want to do is load something when it first renders, so for this we add a useEffect().
 //What it does: when the componet first renders it runs what's in the useEffect. This calls the function 'getUser'

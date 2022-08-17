@@ -1,17 +1,18 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
+
 .contact {
     display: flex;
     align-items: center;
-    color: var(--Text);
+    color: var(--text);
     font-family: "mono";
     font-weight: 400;
     font-size: 1rem;
-    @media screen and (min-width: $tablet) {
+    @include breakpoint($medium) {
         font-size: 1.15rem;
     }
     a {
         text-decoration: none;
-        color: var(--Text);
+        color: var(--text);
         &:hover {
             text-decoration: underline;
         }
@@ -19,10 +20,10 @@
     svg {
         margin-right: 13px;
         path {
-            fill: var(--Icon);
+            fill: var(--icon);
         }
         g {
-            fill: var(--Icon);
+            fill: var(--icon);
         }
     }
 }

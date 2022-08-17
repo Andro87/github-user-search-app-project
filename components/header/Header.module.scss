@@ -1,4 +1,4 @@
-@import "../styles/variables.scss";
+@use "styles/helpers" as *;
 
 .header {
     display: flex;
@@ -17,13 +17,13 @@
     }
     &:hover {
         cursor: pointer;
-        color: var(--HoverSwitch);
+        color: var(--hover-switch);
         svg {
             path {
-                fill: var(--HoverSwitch);
+                fill: var(--hover-switch);
             }
             g {
-                fill: var(--HoverSwitch);
+                fill: var(--hover-switch);
             }
         }
     }

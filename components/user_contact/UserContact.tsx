@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styles from "./userContact.module.scss";
+import styles from "./UserContact.module.scss";
 
 interface Props {
     readonly contact: string;
@@ -8,7 +8,7 @@ interface Props {
     readonly twitter?: boolean;
 }
 
-const UserContact: React.FunctionComponent<Props> = props => {
+export const UserContact: React.FunctionComponent<Props> = props => {
     const { contact, contact_icon, isNotLink, twitter } = props;
 
     function getContact(word) {
@@ -43,5 +43,3 @@ const UserContact: React.FunctionComponent<Props> = props => {
         </div>
     );
 };
-
-export default UserContact;
